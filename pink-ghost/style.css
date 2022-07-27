@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: linear-gradient(white, #7ad08d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.ghost {
+  animation: upAndDown 2s infinite;
+  position: absolute;
+}
+@keyframes upAndDown {
+  0% {
+    margin-top: -70px;
+  }
+  50% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -70px;
+  }
+}
+.ghost .bodyTop {
+  width: 150px;
+  height: 200px;
+  background-color: rgb(219, 128, 203);
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  position: relative;
+}
+.ghost .bodyTop .face {
+  display: flex;
+  position: absolute;
+  width: 100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.ghost .bodyTop .face .eye {
+  background-color: skyblue;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  position: relative;
+}
+.ghost .bodyTop .face .eye .blackEye {
+  background-color: rgb(114, 102, 113);
+  width: 11px;
+  height: 9px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ghost .bodyTop .face .mouth {
+  background-color: skyblue;
+  width: 60px;
+  height: 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: 21px;
+  position: relative;
+}
+.ghost .bodyTop .face .mouth .teeth {
+  background-color: white;
+  width: 20px;
+  height: 10px;
+  position: absolute;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 20px;
+}
+.ghost .bodyBottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+.ghost .bodyBottom .leg {
+  background-color: rgb(219, 128, 203);
+  width: 30px;
+  height: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 5px 10px white;
+}
